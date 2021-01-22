@@ -18,7 +18,7 @@ export default function Map(props) {
 
       <div className="google-map">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY }}
+          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY }}
           defaultCenter={props.location}
           defaultZoom={props.zoomLevel}
         >
