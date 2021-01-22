@@ -14,8 +14,6 @@ const LocationPin = ({ text }) => (
 export default function Map(props) {
   return (
     <div className="map">
-      <h2 className="map-h2">Come Visit Us At Our Campus</h2>
-
       <div className="google-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY }}
