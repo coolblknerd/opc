@@ -1,9 +1,15 @@
+// Libraries
 import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
+
+// Components
 import Map from "./components/Map/Map";
 import TopBar from "./components/TopBar/TopBar";
 import Results from "./components/Results/Results";
 import Footer from "./components/Footer/Footer";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Preferences from "./components/Preferences/Preferences";
 
 const location = {
   address: "1600 Amphitheatre Parkway, Mountain View, california.",
@@ -18,10 +24,20 @@ export default function Album() {
     <React.Fragment>
       <CssBaseline />
       <TopBar />
-      <main>
-        <Map location={location} zoomLevel={17} />
-        <Results cards={cards} />
-      </main>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/preferences">
+            <Preferences />
+          </Route>
+          <Route path="/">
+            <Map location={location} zoomLevel={17} />
+            <Results cards={cards} />
+          </Route>
+        </Switch>
+      </BrowserRouter>
       <Footer />
     </React.Fragment>
   );
