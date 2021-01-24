@@ -10,6 +10,7 @@ import Results from "./components/Results/Results";
 import Footer from "./components/Footer/Footer";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Preferences from "./components/Preferences/Preferences";
+import Login from "./components/Login/Login";
 
 const location = {
   address: "1600 Amphitheatre Parkway, Mountain View, california.",
@@ -31,6 +32,9 @@ export default function Album() {
           </Route>
           <Route path="/preferences">
             <Preferences />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/">
             <Map location={location} zoomLevel={17} />

@@ -1,4 +1,6 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -13,16 +15,22 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
+  const { handleSubmit, register } = useForm();
+
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
 
   return (
     <Container className={classes.container} maxWidth="xs">
-      <form>
+      <form onSubmit={onSubmit}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
                   fullWidth
+                  inputRef={register}
                   label="Email"
                   name="email"
                   size="small"
@@ -32,6 +40,7 @@ export default function Login() {
               <Grid item xs={12}>
                 <TextField
                   fullWidth
+                  inputRef={register}
                   label="Password"
                   name="password"
                   size="small"
