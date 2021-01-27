@@ -1,5 +1,5 @@
 // Libraries
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
@@ -20,7 +20,15 @@ const location = {
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export default function Album() {
+export default function App() {
+  const [token, setToken] = useState();
+
+  // setToken(localStorage.getItem("token"));
+
+  if (!token) {
+    return <Login setToken={setToken} />;
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
