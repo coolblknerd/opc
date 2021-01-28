@@ -1,23 +1,9 @@
-# Getting Started with Create React App
+# OPC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+A toy app to help you find a great local coffee shop to support!
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -68,3 +54,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Resources
+- [Using React Global State Hooks & Context](https://www.savaslabs.com/blog/using-react-global-state-hooks-and-context#:~:text=Set%20and%20manage%20global%20state,light%20mode%20or%20dark%20mode).)

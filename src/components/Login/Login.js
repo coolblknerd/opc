@@ -8,7 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 
-import http from "../../http-common";
+import AuthService from "../../services/auth.service";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -24,13 +24,7 @@ export default function Login({ setToken }) {
   const [password, setPassword] = useState("");
 
   const onSubmit = handleSubmit((data) => {
-    http
-      .post("http://localhost:8080/api/login", data)
-      .then((res) => {
-        console.log(res.data);
-        localStorage.setItem("token", JSON.stringify(res.data.token));
-      })
-      .catch((err) => console.log(err));
+    AuthService.login(data);
   });
 
   return (
