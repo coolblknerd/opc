@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
 
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
@@ -16,15 +17,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Login({ setToken }) {
+const Login = (props) => {
   const classes = useStyles();
   const { handleSubmit, register } = useForm();
+  const { history } = props;
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const onSubmit = handleSubmit((data) => {
-    AuthService.login(data);
+    AuthService.login(data).then(() => {
+      history.push("/");
+      window.location.reload();
+    });
   });
 
   return (
@@ -72,8 +77,10 @@ export default function Login({ setToken }) {
       </form>
     </Container>
   );
-}
+};
 
 Login.propTypes = {
   setToken: PropTypes.func.isRequired,
 };
+
+export default withRouter(Login);

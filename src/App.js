@@ -37,15 +37,21 @@ export default function App() {
   }, []);
 
   if (!token) {
-    return <Login setToken={setToken} />;
+    return (
+      <AppContext.Provider value={globalSettings}>
+        <BrowserRouter>
+          <Login setToken={setToken} />;
+        </BrowserRouter>
+      </AppContext.Provider>
+    );
   }
 
   return (
     <AppContext.Provider value={globalSettings}>
-      <React.Fragment>
-        <CssBaseline />
-        <TopBar />
-        <BrowserRouter>
+      <BrowserRouter>
+        <React.Fragment>
+          <CssBaseline />
+          <TopBar />
           <Switch>
             <Route path="/dashboard">
               <Dashboard />
@@ -61,9 +67,9 @@ export default function App() {
               <Results cards={cards} />
             </Route>
           </Switch>
-        </BrowserRouter>
-        <Footer />
-      </React.Fragment>
+          <Footer />
+        </React.Fragment>
+      </BrowserRouter>
     </AppContext.Provider>
   );
 }
