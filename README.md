@@ -1,6 +1,10 @@
 # OPC
 
 A toy app to help you find a great local coffee shop to support!
+
+### Resources that helped me along the way...
+- [Using React Global State Hooks & Context](https://www.savaslabs.com/blog/using-react-global-state-hooks-and-context#:~:text=Set%20and%20manage%20global%20state,light%20mode%20or%20dark%20mode).)
+- [Should I Commit Yarn Lock and Package Lock JSON Files](https://stackoverflow.com/questions/44552348/should-i-commit-yarn-lock-and-package-lock-json-files)
 ## Available Scripts
 
 In the project directory, you can run:
@@ -46,14 +50,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 ### Advanced Configuration
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### Resources
-- [Using React Global State Hooks & Context](https://www.savaslabs.com/blog/using-react-global-state-hooks-and-context#:~:text=Set%20and%20manage%20global%20state,light%20mode%20or%20dark%20mode).)
